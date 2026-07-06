@@ -17,8 +17,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "rev_e.h"
 
 void keyboard_pre_init_kb(void) {
-    rgblight_set_effect_range(0, 16);
+    rgblight_set_effect_range(16, 1);
     keyboard_pre_init_user();
+}
+
+void matrix_init_kb(void) {
+    rgblight_enable_noeeprom();
+    rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+    rgblight_sethsv_range(0, 0, 0, 0, 16);
+    matrix_init_user();
 }
 
 bool led_update_kb(led_t led_state) {

@@ -19,4 +19,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "quantum.h"
 
 #define CAPS_LOCK_ENABLE true
-#define CAPS_LOCK_COLOR HSV_RED
+#define CAPS_LOCK_COLOR 0, 255, 191
